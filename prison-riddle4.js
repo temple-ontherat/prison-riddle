@@ -102,13 +102,13 @@ if (tally>50) {
 //condition statements which ask if any prisoners died, and displays the appropriate message.
 const test2=document.getElementById("test2");
    if (dead>0) {
-    trialSuccess=trialSuccess+1
+     trialFail=trialFail+1;
     //make message standout better by changing it to red or green.
     //test2.style.color="red";
    // test2.innerHTML="Looks like they're all dead. Scroll down for details.";
    }
    else {
-    trialFail=trialFail+1;
+     trialSuccess=trialSuccess+1;
     //test2.style.color="green";
     //test2.innerHTML="They all survived! Scroll down for details.";
 

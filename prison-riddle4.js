@@ -34,7 +34,7 @@ function restrt(){
 function putBoxNums() {
   trialSuccess=0;
   trialFail=0;  
-  for (let y=1; y<trialNum;y++) {
+  for (let y=0; y<trialNum;y++) {
   let nums=""
   tally=0;
   const innerBoxNum=[];

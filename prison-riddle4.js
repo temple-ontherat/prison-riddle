@@ -119,7 +119,7 @@ const test2=document.getElementById("test2");
 createP("Number of trials: "+trialNum);
 createP("Number of successes: "+trialSuccess);
 createP("Number of fails: "+trialFail);
-createP("Percentage successful: "+ (trialNum/trialSuccess*100));
+createP("Percentage successful: "+ (trialSuccess/trialNum*100));
 window.scrollTo(0, 1000);
 }
 

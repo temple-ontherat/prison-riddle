@@ -5,7 +5,7 @@ let repeat=0;
 let dead=0;
 let trialSuccess=0;
 let trialFail=0;
-let trialNum=10000;
+let trialNum=100000;
 //The setup function is necessary using P5.js.
 function setup() {
 //Make a button and point to answer function when pressed.  
@@ -42,17 +42,17 @@ function putBoxNums() {
   for (let i=0;i<100;i++) {
     innerBoxNum[i]=i;    
   }//The two following for loops randomize the array of numbers 0 through 99. Remarkably, if you don't do it twice, it doesn't work! No prisoner succeeds! Try it with just one!
-  for (let i = innerBoxNum.length -1; i > 0; i--) {
-   let j = Math.floor(Math.random() * i);
+  for (let i = innerBoxNum.length -1; i >= 0; i--) {
+   let j = Math.floor(Math.random() * i+1);
    let k = innerBoxNum[i];
    innerBoxNum[i] = innerBoxNum[j];
    innerBoxNum[j] = k;
   }
-  for (let i = innerBoxNum.length -1; i > 0; i--) {
+ /* for (let i = innerBoxNum.length -1; i > 0; i--) {
     let j = Math.floor(Math.random() * i);
     let k = innerBoxNum[i];
     innerBoxNum[i] = innerBoxNum[j];
-    innerBoxNum[j] = k;
+    innerBoxNum[j] = k;*/
    }// Not necessary to randomize three times, so I commented this out.
   /* for (let i = innerBoxNum.length -1; i > 0; i--) {
     let j = Math.floor(Math.random() * i);
@@ -119,6 +119,7 @@ const test2=document.getElementById("test2");
 createP("Number of trials: "+trialNum);
 createP("Number of successes: "+trialSuccess);
 createP("Number of fails: "+trialFail);
+createP("Percentage successful: "+ trialNum/trialSuccess*100);
 window.scrollTo(0, 1000);
 }
 

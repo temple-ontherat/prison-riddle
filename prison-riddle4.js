@@ -42,18 +42,18 @@ function putBoxNums() {
   for (let i=0;i<100;i++) {
     innerBoxNum[i]=i;    
   }//The two following for loops randomize the array of numbers 0 through 99. Remarkably, if you don't do it twice, it doesn't work! No prisoner succeeds! Try it with just one!
-  for (let i = innerBoxNum.length -1; i >= 0; i--) {
-   let j = Math.floor(Math.random() * i+1);
+  for (let i = innerBoxNum.length -1; i > 0; i--) {
+   let j = Math.floor(Math.random() * i);
    let k = innerBoxNum[i];
    innerBoxNum[i] = innerBoxNum[j];
    innerBoxNum[j] = k;
   }
- /* for (let i = innerBoxNum.length -1; i > 0; i--) {
+  for (let i = innerBoxNum.length -1; i > 0; i--) {
     let j = Math.floor(Math.random() * i);
     let k = innerBoxNum[i];
     innerBoxNum[i] = innerBoxNum[j];
     innerBoxNum[j] = k;
-   }*/ // Not necessary to randomize three times, so I commented this out.
+   } // Not necessary to randomize three times, so I commented this out.
   /* for (let i = innerBoxNum.length -1; i > 0; i--) {
     let j = Math.floor(Math.random() * i);
     let k = innerBoxNum[i];

@@ -5,7 +5,7 @@ let repeat=0;
 let dead=0;
 let trialSuccess=0;
 let trialFail=0;
-let trialNum=100000;
+let trialNum=10000;
 //The setup function is necessary using P5.js.
 function setup() {
 //Make a button and point to answer function when pressed.  
